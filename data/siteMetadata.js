@@ -8,7 +8,7 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://xinran-hu.vercel.app',
-  siteRepo: 'https://github.com/XinranHu26/tailwind-nextjs-starter-blog',
+  siteRepo: 'https://github.com/XinranHu26/xinran-sarah-hu',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/avatar.jpg`,
   email: 'hu874@purdue.edu',
