@@ -14,7 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: post.lastmod || post.date,
     }))
 
-  const routes = ['', 'research', 'publications', 'teaching', 'gallery'].map((route) => ({
+  // trailingSlash is on in next.config.js, so emit the slashed form the
+  // pages declare as canonical — otherwise every sitemap URL 308s.
+  const routes = ['', 'research/', 'publications/', 'teaching/', 'gallery/'].map((route) => ({
     url: `${siteUrl}/${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
