@@ -7,7 +7,7 @@ const siteMetadata = {
     'Ph.D. candidate in the CARE Lab at Purdue University, researching construction safety, human factors, and computer vision for ergonomic risk assessment.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://xinranhu26.github.io',
+  siteUrl: 'https://xinran-hu.vercel.app',
   siteRepo: 'https://github.com/XinranHu26/tailwind-nextjs-starter-blog',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/avatar.jpg`,
