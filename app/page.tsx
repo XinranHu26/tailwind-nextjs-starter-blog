@@ -7,6 +7,7 @@ import SocialIcon from '@/components/social-icons'
 import siteMetadata from '@/data/siteMetadata'
 import publications from '@/data/publicationsData'
 import { researchThemes } from '@/data/researchData'
+import education from '@/data/educationData'
 
 export default function Page() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
@@ -65,18 +66,54 @@ export default function Page() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
-              href="/static/Hu_Xinran_CV.pdf"
+              href="/publications"
               className="bg-primary-500 hover:bg-primary-600 rounded-md px-4 py-2 text-sm font-medium text-white"
             >
-              Download CV
+              Publications
             </Link>
             <Link
-              href="/publications"
+              href="/research"
               className="rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 dark:border-gray-600 dark:text-gray-200 dark:hover:border-gray-500"
             >
-              All publications
+              Research
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Education */}
+      <div className="py-10">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
+          Education
+        </h2>
+        <div className="mt-6 space-y-6">
+          {education.map((item) => (
+            <div
+              key={`${item.degree}-${item.institution}-${item.date}`}
+              className="border-l-2 border-gray-200 pl-5 dark:border-gray-700"
+            >
+              <div className="flex flex-wrap items-baseline justify-between gap-x-4">
+                <h3 className="font-semibold text-gray-900 dark:text-gray-100">
+                  {item.degree}, {item.field}
+                </h3>
+                <span className="text-sm text-gray-500 dark:text-gray-400">{item.date}</span>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {item.institution} &middot; {item.location}
+              </p>
+              {item.advisor && (
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  Advisor: {item.advisor}
+                </p>
+              )}
+              {item.thesis && (
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                  <span className="font-medium">{item.thesisLabel}:</span>{' '}
+                  <span className="italic">{item.thesis}</span>
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
 
