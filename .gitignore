@@ -45,3 +45,7 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# Local content staging (raw photos, source docs) — not published
+content-inbox/*
+!content-inbox/README.md
