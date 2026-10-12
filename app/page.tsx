@@ -5,18 +5,20 @@ import Image from '@/components/Image'
 import Link from '@/components/Link'
 import SocialIcon from '@/components/social-icons'
 import siteMetadata from '@/data/siteMetadata'
-import publications from '@/data/publicationsData'
 import { researchThemes } from '@/data/researchData'
+import publications from '@/data/publicationsData'
 import education from '@/data/educationData'
 
 export default function Page() {
   const author = allAuthors.find((p) => p.slug === 'default') as Authors
   const mainContent = coreContent(author)
-  const { name, avatar, occupation, company } = mainContent
+  const { name, avatar, occupation, company, tagline } = mainContent
 
-  const journals = publications.find((g) => g.heading === 'Journal Articles')?.items ?? []
-  const conferences = publications.find((g) => g.heading === 'Conference Proceedings')?.items ?? []
-  const selected = [...journals, ...conferences].slice(0, 4)
+  const topicOrder = ['BIM', 'Ergonomics', 'Fatigue', 'Usability']
+  const selected = publications
+    .flatMap((group) => group.items)
+    .filter((pub) => pub.selected)
+    .sort((a, b) => topicOrder.indexOf(a.topic ?? '') - topicOrder.indexOf(b.topic ?? ''))
 
   return (
     <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -45,7 +47,12 @@ export default function Page() {
           <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             {name}
           </h1>
-          <p className="mt-2 text-lg text-gray-700 dark:text-gray-300">{occupation}</p>
+          {tagline && (
+            <p className="text-primary-600 dark:text-primary-400 mt-1 text-sm font-medium">
+              {tagline}
+            </p>
+          )}
+          <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">{occupation}</p>
           <p className="text-gray-500 dark:text-gray-400">{company}</p>
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400">
             <a
@@ -106,12 +113,6 @@ export default function Page() {
                   Advisor: {item.advisor}
                 </p>
               )}
-              {item.thesis && (
-                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                  <span className="font-medium">{item.thesisLabel}:</span>{' '}
-                  <span className="italic">{item.thesis}</span>
-                </p>
-              )}
             </div>
           ))}
         </div>
@@ -168,12 +169,14 @@ export default function Page() {
             See all &rarr;
           </Link>
         </div>
-        <ul className="mt-6 space-y-5">
+        <ul className="mt-6 space-y-6">
           {selected.map((pub) => (
             <li key={pub.title} className="text-sm leading-6">
-              <p className="text-gray-500 dark:text-gray-400">
-                {pub.authors} ({pub.year}).
-              </p>
+              {pub.topic && (
+                <span className="text-primary-600 dark:text-primary-400 text-xs font-semibold tracking-wide uppercase">
+                  {pub.topic}
+                </span>
+              )}
               <p className="font-medium text-gray-900 dark:text-gray-100">
                 {pub.doi ? (
                   <Link href={pub.doi} className="hover:text-primary-500">
@@ -182,6 +185,9 @@ export default function Page() {
                 ) : (
                   pub.title
                 )}
+              </p>
+              <p className="text-gray-500 dark:text-gray-400">
+                {pub.authors} ({pub.year}).
               </p>
               <p className="text-gray-500 italic dark:text-gray-400">{pub.venue}</p>
             </li>

@@ -9,6 +9,10 @@ export interface Publication {
   url?: string
   /** e.g. "Best Paper Award", "Abstract only", "Full draft completed" */
   note?: string
+  /** Featured on the home page */
+  selected?: boolean
+  /** Theme label shown beside a featured entry, e.g. "Usability" */
+  topic?: string
 }
 
 export interface PublicationGroup {
@@ -89,6 +93,8 @@ const publications: PublicationGroup[] = [
       },
       {
         key: 'C10',
+        selected: true,
+        topic: 'Usability',
         authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
         year: '2025',
         title:
@@ -107,6 +113,8 @@ const publications: PublicationGroup[] = [
       },
       {
         key: 'C08',
+        selected: true,
+        topic: 'Ergonomics',
         authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
         year: '2024',
         title:
@@ -117,6 +125,8 @@ const publications: PublicationGroup[] = [
       },
       {
         key: 'C07',
+        selected: true,
+        topic: 'Fatigue',
         authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
         year: '2024',
         title:
@@ -136,6 +146,8 @@ const publications: PublicationGroup[] = [
       },
       {
         key: 'C05',
+        selected: true,
+        topic: 'BIM',
         authors: 'Hu, X., Guo, X., & Chen, Y.',
         year: '2024',
         title: "BIM's impact on project management performance",
