@@ -34,7 +34,32 @@ export interface PhotoSection {
 const gallery: PhotoSection[] = [
   {
     heading: 'Conferences & Presentations',
+    // Lead row first, then newest to oldest.
     photos: [
+      {
+        src: '/static/images/gallery/trb-2025-podium.jpg',
+        width: 1600,
+        height: 1926,
+        caption: 'Presenting on exoskeletons and joint mechanics in shoveling.',
+        event: 'TRB Annual Meeting, Washington, DC',
+        date: 'January 2025',
+      },
+      {
+        src: '/static/images/gallery/trb-2025-signage.jpg',
+        width: 1600,
+        height: 1403,
+        caption: 'At the TRB Annual Meeting.',
+        event: 'TRB Annual Meeting, Washington, DC',
+        date: 'January 2025',
+      },
+      {
+        src: '/static/images/gallery/ahfe-2024-honolulu.jpg',
+        width: 1080,
+        height: 1440,
+        caption: 'Left to right: Xingzhou Guo, Hongyue Wu, and me.',
+        event: 'AHFE International Conference, Honolulu, HI',
+        date: '2024',
+      },
       {
         src: '/static/images/gallery/jtrp-poster-session.jpg',
         width: 1600,
@@ -83,30 +108,6 @@ const gallery: PhotoSection[] = [
         event: 'Purdue Road School, West Lafayette, IN',
         objectPosition: '75% center',
         date: '2025',
-      },
-      {
-        src: '/static/images/gallery/trb-2025-podium.jpg',
-        width: 1600,
-        height: 1926,
-        caption: 'Presenting on exoskeletons and joint mechanics in shoveling.',
-        event: 'TRB Annual Meeting, Washington, DC',
-        date: 'January 2025',
-      },
-      {
-        src: '/static/images/gallery/trb-2025-signage.jpg',
-        width: 1600,
-        height: 1403,
-        caption: 'At the TRB Annual Meeting.',
-        event: 'TRB Annual Meeting, Washington, DC',
-        date: 'January 2025',
-      },
-      {
-        src: '/static/images/gallery/ahfe-2024-honolulu.jpg',
-        width: 1080,
-        height: 1440,
-        caption: 'Left to right: Xingzhou Guo, Hongyue Wu, and me.',
-        event: 'AHFE International Conference, Honolulu, HI',
-        date: '2024',
       },
     ],
   },
