@@ -4,7 +4,7 @@ export interface Photo {
   /** Intrinsic size of the processed file, used by next/image */
   width: number
   height: number
-  /** One short line */
+  /** Shown under the photo when the section has captions on; always the alt text */
   caption: string
   /** Event and city, when it is not already implied by the section */
   event?: string
@@ -17,6 +17,8 @@ export interface Photo {
 export interface PhotoSection {
   heading: string
   blurb?: string
+  /** Print captions under each photo. Defaults to true. */
+  showCaptions?: boolean
   photos: Photo[]
 }
 
@@ -107,6 +109,7 @@ const gallery: PhotoSection[] = [
   {
     heading: 'Teaching',
     blurb: 'CM 301, Purdue University.',
+    showCaptions: false,
     photos: [
       {
         src: '/static/images/gallery/lecture-hall-wide.jpg',
@@ -132,6 +135,7 @@ const gallery: PhotoSection[] = [
   {
     heading: 'Field Work',
     blurb: 'Data collection with INDOT highway maintenance crews (SPR-4838).',
+    showCaptions: false,
     photos: [
       {
         src: '/static/images/gallery/fieldwork-indot-trucks.jpg',

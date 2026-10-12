@@ -45,15 +45,17 @@ export default function Page() {
                         style={{ objectPosition: photo.objectPosition ?? 'center' }}
                       />
                     </div>
-                    <figcaption className="mt-3 text-sm">
-                      <p className="text-gray-700 dark:text-gray-300">{photo.caption}</p>
-                      {photo.event && (
-                        <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
-                          {photo.event}
-                          {photo.date ? ` · ${photo.date}` : ''}
-                        </p>
-                      )}
-                    </figcaption>
+                    {section.showCaptions !== false && (
+                      <figcaption className="mt-3 text-sm">
+                        <p className="text-gray-700 dark:text-gray-300">{photo.caption}</p>
+                        {photo.event && (
+                          <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                            {photo.event}
+                            {photo.date ? ` · ${photo.date}` : ''}
+                          </p>
+                        )}
+                      </figcaption>
+                    )}
                   </figure>
                 ))}
               </div>
