@@ -49,35 +49,37 @@ const publications: PublicationGroup[] = [
       },
     ],
   },
-  {
-    heading: 'Manuscripts in Preparation',
-    items: [
-      {
-        authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
-        year: '2026',
-        title:
-          'Effects of an add-on ergonomic handle on trunk and shoulder kinematics during simulated highway maintenance shoveling: A markerless 3D motion capture study',
-        venue: 'Applied Ergonomics',
-        note: 'To be submitted',
-      },
-      {
-        authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
-        year: '2026',
-        title:
-          'Effects of ergonomic handle and back exoskeleton on physical fatigue during shoveling: Physiological and subjective responses',
-        venue: 'Applied Ergonomics',
-        note: 'To be submitted',
-      },
-      {
-        authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
-        year: '2026',
-        title:
-          'Accuracy of markerless human pose estimation models in field transportation maintenance work: A validation study using Xsens motion capture',
-        venue: 'Automation in Construction',
-        note: 'In preparation',
-      },
-    ],
-  },
+  // Not published yet, so kept off the public site. Uncomment an entry
+  // (or move it into Journal Articles) once it is accepted.
+  // {
+  //   heading: 'Manuscripts in Preparation',
+  //   items: [
+  //     {
+  //       authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
+  //       year: '2026',
+  //       title:
+  //         'Effects of an add-on ergonomic handle on trunk and shoulder kinematics during simulated highway maintenance shoveling: A markerless 3D motion capture study',
+  //       venue: 'Applied Ergonomics',
+  //       note: 'To be submitted',
+  //     },
+  //     {
+  //       authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
+  //       year: '2026',
+  //       title:
+  //         'Effects of ergonomic handle and back exoskeleton on physical fatigue during shoveling: Physiological and subjective responses',
+  //       venue: 'Applied Ergonomics',
+  //       note: 'To be submitted',
+  //     },
+  //     {
+  //       authors: 'Hu, X., Guo, X., Chen, Y., & Zhang, J.',
+  //       year: '2026',
+  //       title:
+  //         'Accuracy of markerless human pose estimation models in field transportation maintenance work: A validation study using Xsens motion capture',
+  //       venue: 'Automation in Construction',
+  //       note: 'In preparation',
+  //     },
+  //   ],
+  // },
   {
     heading: 'Conference Proceedings',
     items: [
