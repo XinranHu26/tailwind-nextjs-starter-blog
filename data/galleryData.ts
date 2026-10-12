@@ -125,10 +125,10 @@ const gallery: PhotoSection[] = [
         objectPosition: 'center 62%',
       },
       {
-        src: '/static/images/gallery/lecture-cm301.jpg',
+        src: '/static/images/gallery/lecture-engaging.jpg',
         width: 1600,
         height: 1200,
-        caption: 'A lecture session.',
+        caption: 'Working through a problem with the class.',
       },
     ],
   },
@@ -176,6 +176,32 @@ const gallery: PhotoSection[] = [
       // height: 1200,
       // caption: 'Briefing the crew before a session.',
       // },
+    ],
+  },
+  {
+    heading: 'Beyond Research',
+    blurb: 'Bouldering, lab outings, and hiking around Indiana. Also pickleball and bowling.',
+    showCaptions: false,
+    photos: [
+      {
+        src: '/static/images/gallery/personal-bouldering.jpg',
+        width: 768,
+        height: 1024,
+        caption: 'Bouldering at the climbing gym.',
+      },
+      {
+        src: '/static/images/gallery/personal-lab-outing.jpg',
+        width: 1600,
+        height: 1200,
+        caption: 'A lab outing by the water at dusk.',
+      },
+      {
+        src: '/static/images/gallery/personal-hiking-trail.jpg',
+        width: 768,
+        height: 1024,
+        caption: 'On the trail.',
+        objectPosition: 'center 90%',
+      },
     ],
   },
 ]
