@@ -79,7 +79,7 @@ const gallery: PhotoSection[] = [
         src: '/static/images/gallery/jtrp-poster-session.jpg',
         width: 1600,
         height: 1200,
-        caption: 'With labmates at the poster session.',
+        caption: 'With my advisor Dr. Yunfeng (Cindy) Chen and a labmate at the poster session.',
         event: 'JTRP Poster Session, Indianapolis, IN',
       },
       {

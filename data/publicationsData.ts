@@ -7,7 +7,7 @@ export interface Publication {
   venue: string
   doi?: string
   url?: string
-  /** e.g. "Best Paper Award", "Abstract only", "Full draft completed" */
+  /** e.g. "Best Paper Award", "Abstract only", "Abstract accepted" */
   note?: string
   /** Featured on the home page */
   selected?: boolean
@@ -91,7 +91,7 @@ const publications: PublicationGroup[] = [
           'Impact of body mass index, tenure length, and age on physical exertion of transportation maintenance workers during simulated asphalt shoveling',
         venue:
           'AHFE International Conference on Human Factors in Design, Engineering, and Computing, Honolulu, HI',
-        note: 'Full draft completed',
+        note: 'Abstract accepted',
       },
       {
         key: 'C10',
