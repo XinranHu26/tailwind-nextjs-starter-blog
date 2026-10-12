@@ -136,6 +136,9 @@ const gallery: PhotoSection[] = [
     heading: 'Field Work',
     blurb: 'Data collection with INDOT highway maintenance crews (SPR-4838).',
     showCaptions: false,
+    // Three more field photos are commented out below: two duplicated the
+    // shots kept here, and the crew briefing showed workers' faces clearly,
+    // which goes further than a study consent form usually covers.
     photos: [
       {
         src: '/static/images/gallery/fieldwork-indot-trucks.jpg',
@@ -143,12 +146,12 @@ const gallery: PhotoSection[] = [
         height: 1620,
         caption: 'On site with the INDOT maintenance fleet.',
       },
-      {
-        src: '/static/images/gallery/fieldwork-camera-setup.jpg',
-        width: 1178,
-        height: 1466,
-        caption: 'Setting up cameras for markerless pose estimation.',
-      },
+      // {
+      // src: '/static/images/gallery/fieldwork-camera-setup.jpg',
+      // width: 1178,
+      // height: 1466,
+      // caption: 'Setting up cameras for markerless pose estimation.',
+      // },
       {
         src: '/static/images/gallery/fieldwork-roadside-crew.jpg',
         width: 1600,
@@ -161,18 +164,18 @@ const gallery: PhotoSection[] = [
         height: 2133,
         caption: 'During an active pavement maintenance operation.',
       },
-      {
-        src: '/static/images/gallery/fieldwork-sensor-station.jpg',
-        width: 1600,
-        height: 2133,
-        caption: 'The roadside station logging physiological and motion data.',
-      },
-      {
-        src: '/static/images/gallery/fieldwork-crew-briefing.jpg',
-        width: 1600,
-        height: 1200,
-        caption: 'Briefing the crew before a session.',
-      },
+      // {
+      // src: '/static/images/gallery/fieldwork-sensor-station.jpg',
+      // width: 1600,
+      // height: 2133,
+      // caption: 'The roadside station logging physiological and motion data.',
+      // },
+      // {
+      // src: '/static/images/gallery/fieldwork-crew-briefing.jpg',
+      // width: 1600,
+      // height: 1200,
+      // caption: 'Briefing the crew before a session.',
+      // },
     ],
   },
 ]
