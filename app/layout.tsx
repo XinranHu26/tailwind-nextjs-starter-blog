@@ -73,9 +73,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${publicSans.variable} ${ebGaramond.variable} scroll-smooth`}
       suppressHydrationWarning
     >
+      <meta name="google-site-verification" content="JbXOpqNPR65CADTcSmZXhg-VQ9ft7tuDNPP_4Uc_AR4" />
       <link
         rel="apple-touch-icon"
-        sizes="76x76"
+        sizes="180x180"
         href={`${basePath}/static/favicons/apple-touch-icon.png`}
       />
       <link
@@ -96,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         href={`${basePath}/static/favicons/safari-pinned-tab.svg`}
         color="#5bbad5"
       />
-      <meta name="msapplication-TileColor" content="#000000" />
+      <meta name="msapplication-TileColor" content="#cfb991" />
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
