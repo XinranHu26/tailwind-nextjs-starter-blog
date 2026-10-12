@@ -71,11 +71,6 @@ export default function Page() {
                 {grant.sponsor} &middot; <span className="font-medium">{grant.role}</span>
               </p>
               <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{grant.investigators}</p>
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-600 dark:text-gray-400">
-                {grant.responsibilities.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>

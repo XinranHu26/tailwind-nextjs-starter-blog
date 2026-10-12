@@ -39,7 +39,7 @@ export default function Page() {
                       {pub.doi || pub.url ? (
                         <Link
                           href={(pub.doi ?? pub.url) as string}
-                          className="hover:text-primary-500"
+                          className="hover:text-primary-500 dark:hover:text-primary-400"
                         >
                           {pub.title}
                         </Link>

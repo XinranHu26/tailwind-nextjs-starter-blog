@@ -6,7 +6,6 @@ export interface Grant {
   role: string
   amount?: string
   investigators: string
-  responsibilities: string[]
 }
 
 export const totalAwarded = '$916,250'
@@ -21,11 +20,6 @@ export const grantsAwarded: Grant[] = [
     role: 'Research Assistant',
     amount: '$276,248',
     investigators: 'Dr. Yunfeng Chen (PI), Dr. Jiansong Zhang (Co-PI), Dr. Steven Dunlop (Co-PI)',
-    responsibilities: [
-      'Developed the research need statement',
-      'Prepared the full research proposal, including outline, literature review, research design, work schedule, and formatting',
-      'Advising a junior Ph.D. student (research assistant)',
-    ],
   },
   {
     id: 'SPR-4838',
@@ -35,11 +29,6 @@ export const grantsAwarded: Grant[] = [
     role: 'Lead Research Assistant',
     amount: '$283,508',
     investigators: 'Dr. Yunfeng Chen (PI), Dr. Yiheng Feng (Co-PI), Dr. Jiansong Zhang (Co-PI)',
-    responsibilities: [
-      'Coordinate with INDOT district managers, subdistrict managers, and crew leaders',
-      'Conduct field data collection (physiological, motion, subjective, and environmental)',
-      'Analyze data and prepare progress reports and papers',
-    ],
   },
   {
     id: 'SPR-4806',
@@ -50,10 +39,6 @@ export const grantsAwarded: Grant[] = [
     role: 'Research Assistant',
     amount: '$256,665',
     investigators: 'Dr. Steven Dunlop (PI), Dr. Satish Ukkusuri (Co-PI), Dr. Yunfeng Chen (Co-PI)',
-    responsibilities: [
-      'Analyzed INDOT exit survey data using descriptive statistics, ANOVA, and post hoc analysis',
-      'Prepared reports, papers, and posters',
-    ],
   },
   {
     id: 'SPR-4523',
@@ -63,10 +48,6 @@ export const grantsAwarded: Grant[] = [
     role: 'Research Assistant',
     amount: '$99,829',
     investigators: 'Dr. Yunfeng Chen (PI), Dr. Jiansong Zhang (Co-PI)',
-    responsibilities: [
-      'Analyzed electromyography, heart rate, and electrodermal activity data alongside subjective measures (rating of perceived exertion, usability, perceived local pressure) using ANOVA and post hoc analysis',
-      'Prepared papers and posters',
-    ],
   },
 ]
 

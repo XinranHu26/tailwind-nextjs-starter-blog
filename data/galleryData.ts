@@ -4,12 +4,14 @@ export interface Photo {
   /** Intrinsic size of the processed file, used by next/image */
   width: number
   height: number
-  /** Sentence describing what is happening */
+  /** One short line */
   caption: string
-  /** Event name and city */
+  /** Event and city, when it is not already implied by the section */
   event?: string
   /** e.g. "January 2025" */
   date?: string
+  /** CSS object-position for the square crop; defaults to center */
+  objectPosition?: string
 }
 
 export interface PhotoSection {
@@ -20,38 +22,38 @@ export interface PhotoSection {
 
 /**
  * HOW TO ADD A PHOTO
- * 1. Drop the original into content-inbox/photos-presentations/ (or photos-fieldwork/)
+ * 1. Drop the original into content-inbox/photos-presentations/
  * 2. Tell Claude, or resize it yourself into public/static/images/gallery/
  * 3. Add an entry below. Empty sections are hidden automatically.
+ *
+ * Photos display in a uniform square grid, so the subject should sit near
+ * the centre of the frame.
  */
 const gallery: PhotoSection[] = [
   {
     heading: 'Conferences & Presentations',
-    blurb: 'Lecture presentations, poster sessions, and conference travel.',
     photos: [
       {
         src: '/static/images/gallery/trb-2025-podium.jpg',
         width: 1600,
         height: 1926,
-        caption:
-          'Presenting our work on how back exoskeletons and ergonomic handles change joint mechanics during shoveling.',
-        event: 'Transportation Research Board Annual Meeting, Washington, DC',
+        caption: 'Presenting on exoskeletons and joint mechanics in shoveling.',
+        event: 'TRB Annual Meeting, Washington, DC',
         date: 'January 2025',
       },
       {
         src: '/static/images/gallery/trb-2025-signage.jpg',
         width: 1600,
         height: 1403,
-        caption: 'At the Transportation Research Board Annual Meeting.',
-        event: 'Transportation Research Board Annual Meeting, Washington, DC',
+        caption: 'At the TRB Annual Meeting.',
+        event: 'TRB Annual Meeting, Washington, DC',
         date: 'January 2025',
       },
       {
         src: '/static/images/gallery/ahfe-2024-honolulu.jpg',
         width: 1080,
         height: 1440,
-        caption:
-          'With labmates at the AHFE International Conference, where I presented video-based ergonomic risk assessment for transportation maintenance workers.',
+        caption: 'With labmates at AHFE.',
         event: 'AHFE International Conference, Honolulu, HI',
         date: '2024',
       },
@@ -59,8 +61,7 @@ const gallery: PhotoSection[] = [
         src: '/static/images/gallery/wbc-2025-presentation.jpg',
         width: 1600,
         height: 1200,
-        caption:
-          'Presenting a field-based usability study of passive back exoskeletons and ergonomic handles.',
+        caption: 'Presenting a field study on exoskeletons and ergonomic handles.',
         event: 'CIB World Building Congress, West Lafayette, IN',
         date: '2025',
       },
@@ -68,7 +69,7 @@ const gallery: PhotoSection[] = [
         src: '/static/images/gallery/wbc-2025-group.jpg',
         width: 1600,
         height: 1200,
-        caption: 'With fellow presenters at the CIB World Building Congress.',
+        caption: 'With fellow presenters.',
         event: 'CIB World Building Congress, West Lafayette, IN',
         date: '2025',
       },
@@ -76,106 +77,97 @@ const gallery: PhotoSection[] = [
         src: '/static/images/gallery/jtrp-poster-session.jpg',
         width: 1600,
         height: 1200,
-        caption: 'With labmates at the Joint Transportation Research Program poster session.',
+        caption: 'With labmates at the poster session.',
         event: 'JTRP Poster Session, Indianapolis, IN',
       },
       {
         src: '/static/images/gallery/jtrp-poster-discussion.jpg',
         width: 870,
         height: 652,
-        caption: 'Discussing our applied ergonomics results with visitors at the poster session.',
+        caption: 'Discussing results with visitors.',
         event: 'JTRP Poster Session, Indianapolis, IN',
       },
       {
         src: '/static/images/gallery/road-school-poster.jpg',
         width: 1600,
         height: 1200,
-        caption: 'Presenting the Applied Ergonomics poster at Purdue Road School.',
+        caption: 'Presenting the Applied Ergonomics poster.',
         event: 'Purdue Road School, West Lafayette, IN',
+        objectPosition: '75% center',
       },
       {
         src: '/static/images/gallery/road-school-poster-board.jpg',
         width: 1280,
         height: 1707,
-        caption: 'At the Purdue Road School poster session.',
+        caption: 'At the poster session.',
         event: 'Purdue Road School, West Lafayette, IN',
       },
     ],
   },
   {
     heading: 'Teaching',
-    blurb: 'Lecturing for CM 301, Introduction to Construction Company Financial Management.',
+    blurb: 'CM 301, Purdue University.',
     photos: [
       {
         src: '/static/images/gallery/lecture-hall-wide.jpg',
         width: 1600,
         height: 1067,
-        caption: 'Delivering a lecture on statement analysis to the CM 301 class.',
-        event: 'CM 301, Purdue University',
+        caption: 'Lecturing on statement analysis.',
       },
       {
         src: '/static/images/gallery/lecture-podium.jpg',
         width: 1600,
         height: 2400,
         caption: 'Teaching line-item, horizontal, and vertical analysis.',
-        event: 'CM 301, Purdue University',
+        objectPosition: 'center 62%',
       },
       {
         src: '/static/images/gallery/lecture-cm301.jpg',
         width: 1600,
         height: 1200,
-        caption: 'A lecture session on construction company financial management.',
-        event: 'CM 301, Purdue University',
+        caption: 'A lecture session.',
       },
     ],
   },
   {
     heading: 'Field Work',
-    blurb:
-      'Data collection with INDOT highway maintenance crews for the automated ergonomic risk assessment project (SPR-4838).',
+    blurb: 'Data collection with INDOT highway maintenance crews (SPR-4838).',
     photos: [
       {
         src: '/static/images/gallery/fieldwork-indot-trucks.jpg',
         width: 1600,
         height: 1620,
-        caption: 'On site with the INDOT maintenance fleet before a data collection session.',
-        event: 'INDOT field study, Indiana',
+        caption: 'On site with the INDOT maintenance fleet.',
       },
       {
         src: '/static/images/gallery/fieldwork-camera-setup.jpg',
         width: 1178,
         height: 1466,
-        caption: 'Setting up cameras to capture worker motion for markerless pose estimation.',
-        event: 'INDOT field study, Indiana',
+        caption: 'Setting up cameras for markerless pose estimation.',
       },
       {
         src: '/static/images/gallery/fieldwork-roadside-crew.jpg',
         width: 1600,
         height: 1200,
-        caption: 'Recording a maintenance crew at work along the roadway.',
-        event: 'INDOT field study, Indiana',
+        caption: 'Recording a crew at work along the roadway.',
       },
       {
         src: '/static/images/gallery/fieldwork-paving-operation.jpg',
         width: 1600,
         height: 2133,
-        caption: 'Collecting data during an active pavement maintenance operation.',
-        event: 'INDOT field study, Indiana',
+        caption: 'During an active pavement maintenance operation.',
       },
       {
         src: '/static/images/gallery/fieldwork-sensor-station.jpg',
         width: 1600,
         height: 2133,
-        caption:
-          'The roadside data station used to log physiological, motion, and environmental measurements.',
-        event: 'INDOT field study, Indiana',
+        caption: 'The roadside station logging physiological and motion data.',
       },
       {
         src: '/static/images/gallery/fieldwork-crew-briefing.jpg',
         width: 1600,
         height: 1200,
-        caption: 'Briefing the maintenance crew before a field session.',
-        event: 'INDOT field study, Indiana',
+        caption: 'Briefing the crew before a session.',
       },
     ],
   },

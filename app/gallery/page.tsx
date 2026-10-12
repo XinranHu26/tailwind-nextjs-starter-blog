@@ -13,9 +13,6 @@ export default function Page() {
         <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
           Gallery
         </h1>
-        <p className="text-gray-500 dark:text-gray-400">
-          Conference talks, poster sessions, teaching, and field data collection.
-        </p>
       </div>
 
       {sections.length === 0 ? (
@@ -34,23 +31,24 @@ export default function Page() {
               {section.blurb && (
                 <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{section.blurb}</p>
               )}
-              <div className="mt-6 gap-6 sm:columns-2">
+              <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
                 {section.photos.map((photo) => (
-                  <figure key={photo.src} className="mb-8 break-inside-avoid">
-                    <div className="overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+                  <figure key={photo.src}>
+                    <div className="aspect-square overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
                       <Image
                         src={photo.src}
                         alt={photo.caption}
                         width={photo.width}
                         height={photo.height}
-                        sizes="(min-width: 640px) 50vw, 100vw"
-                        className="h-auto w-full"
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        className="h-full w-full object-cover"
+                        style={{ objectPosition: photo.objectPosition ?? 'center' }}
                       />
                     </div>
                     <figcaption className="mt-3 text-sm">
                       <p className="text-gray-700 dark:text-gray-300">{photo.caption}</p>
                       {photo.event && (
-                        <p className="mt-0.5 text-gray-500 italic dark:text-gray-400">
+                        <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
                           {photo.event}
                           {photo.date ? ` · ${photo.date}` : ''}
                         </p>

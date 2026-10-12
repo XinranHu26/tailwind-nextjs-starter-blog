@@ -3,7 +3,6 @@ export interface Course {
   title: string
   terms: string
   enrollment?: string
-  duties: string[]
 }
 
 export const teachingInterests = [
@@ -22,49 +21,24 @@ export const courses: Course[] = [
     title: 'Introduction to Construction Company Financial Management',
     terms: 'Fall 2024 – Fall 2026',
     enrollment: 'Fall 2026 (120 undergraduates); Fall 2025 (91); Spring 2025 (88); Fall 2024 (60)',
-    duties: [
-      'Delivered a lecture',
-      'Assisted the instructor in developing the syllabus, exam questions, and course materials',
-      'Supported ACCE accreditation by assessing student performance on Student Learning Outcomes',
-      'Revised course materials to meet ADA requirements',
-      'Coordinated testing accommodations for students registered with the Disability Resource Center',
-      'Analyzed exam results and prepared performance summaries',
-      'Held office hours and graded homework with written feedback',
-    ],
   },
   {
     code: 'CM 535',
     title: 'Construction Accounting and Financial Management',
     terms: 'Spring 2024, Spring 2026',
     enrollment: 'Spring 2026 (42 graduate students); Spring 2024 (46)',
-    duties: [
-      'Mentored a junior Ph.D. student on grading and student communication',
-      'Revised course materials to meet ADA requirements',
-      'Conducted one-on-one post-exam reviews',
-      'Graded homework with written feedback',
-    ],
   },
   {
     code: 'CM 200',
     title: 'Intermediate Pre-Construction Management',
     terms: 'Fall 2022 – Spring 2024',
     enrollment: 'Spring 2024 (70 undergraduates); Fall 2023 (87); Spring 2023 (98); Fall 2022 (98)',
-    duties: [
-      'Delivered lectures on project delivery methods',
-      'Taught lab sections on construction company accounting',
-      'Graded homework with written feedback',
-    ],
   },
   {
     code: 'CM 581',
     title: 'Construction Finance and Company Management',
     terms: 'Spring 2023',
     enrollment: 'Spring 2023 (11 graduate students)',
-    duties: [
-      'Answered student questions via email',
-      'Analyzed exam results and prepared performance summaries',
-      'Graded homework',
-    ],
   },
 ]
 
@@ -73,7 +47,6 @@ export interface Mentee {
   level: string
   role: string
   period: string
-  description: string
 }
 
 export const mentoring: Mentee[] = [
@@ -82,30 +55,24 @@ export const mentoring: Mentee[] = [
     level: 'Ph.D. candidate, Purdue University',
     role: 'Teaching mentor',
     period: 'Fall 2023 – Present',
-    description: 'Mentored on grading assignments and communicating with students.',
   },
   {
     name: 'Bingzhen Li',
     level: 'Ph.D. student, Purdue University',
     role: 'Research mentor',
     period: 'Fall 2025 – Present',
-    description:
-      'Mentored research on retention of the early-career highway technician workforce and field assessment of occupational heat strain via wearable physiological monitoring, covering proposal writing, literature review, research design, data collection and analysis, progress reports, and poster presentations.',
   },
   {
     name: 'Hongyu Tu and Yipeng Wei',
     level: 'Ph.D. students, Purdue University',
     role: 'Research mentor',
     period: 'Fall 2026',
-    description:
-      'Mentored research on computer vision-based ergonomic risk evaluation, including data collection and analysis.',
   },
   {
     name: 'Vivek Reddy Puttha',
     level: "Master's student, Purdue University",
     role: 'Research mentor',
     period: 'Summer 2026',
-    description: 'Mentored on field data collection and data analysis for the ergonomics project.',
   },
 ]
 

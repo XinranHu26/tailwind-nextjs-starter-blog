@@ -179,7 +179,10 @@ export default function Page() {
               )}
               <p className="font-medium text-gray-900 dark:text-gray-100">
                 {pub.doi ? (
-                  <Link href={pub.doi} className="hover:text-primary-500">
+                  <Link
+                    href={pub.doi}
+                    className="hover:text-primary-500 dark:hover:text-primary-400"
+                  >
                     {pub.title}
                   </Link>
                 ) : (

@@ -58,11 +58,6 @@ export default function Page() {
               {course.enrollment && (
                 <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{course.enrollment}</p>
               )}
-              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-gray-600 dark:text-gray-400">
-                {course.duties.map((duty) => (
-                  <li key={duty}>{duty}</li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
@@ -81,9 +76,6 @@ export default function Page() {
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400">
                 {mentee.level} &middot; {mentee.role}
-              </p>
-              <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                {mentee.description}
               </p>
             </div>
           ))}
